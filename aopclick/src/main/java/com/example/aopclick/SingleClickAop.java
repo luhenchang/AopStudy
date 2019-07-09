@@ -16,7 +16,6 @@ import java.lang.reflect.Method;
 @Aspect
 public class SingleClickAop {
     private static final long DEFAULT_TIME_INTERVAL = 5000;
-
     /**
      * 定义切点，标记切点为所有被@AopClick注解的方法。
      * 注意:这里的com.example.aopstudy.AopClick需要替换成自己
@@ -72,7 +71,7 @@ public class SingleClickAop {
      * @param intervalMillis 时间间期（毫秒）
      * @return true:是，false:不是
      */
-    public static boolean isFastDoubleClick(View v, long intervalMillis) {
+    private static boolean isFastDoubleClick(View v, long intervalMillis) {
         int viewId = v.getId();
         long time = System.currentTimeMillis();
         long timeInterval = Math.abs(time - mLastClickTime);
