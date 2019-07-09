@@ -22,7 +22,7 @@ public class SingleClickAop {
      * 注意:这里的com.example.aopstudy.AopClick需要替换成自己
      * 安装路径下面的自定义注解接口
      */
-    @Pointcut("execution(@com.example.aopstudy.AopClick * *(..))")
+    @Pointcut("execution(@com.example.aopclick.AopClick * *(..))")
     public void cutPointMothod() {
     }
 

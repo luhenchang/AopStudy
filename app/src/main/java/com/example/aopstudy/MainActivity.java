@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView toastClick=findViewById(R.id.toastClick);
         toastClick.setOnClickListener(this);
     }
-    @AopClick(1500)
+    @AopClick(11500)
     @Override
     public void onClick(View v) {
       switch (v.getId()){
