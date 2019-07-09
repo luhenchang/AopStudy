@@ -1,9 +1,7 @@
 import org.aspectj.bridge.IMessage
 import org.aspectj.bridge.MessageHandler
 import org.aspectj.tools.ajc.Main
-
 apply plugin: 'com.android.application'
-apply plugin: 'com.github.dcendents.android-maven'
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -29,7 +27,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'org.aspectj:aspectjrt:1.8.1'
+    implementation project(path: ':aopclick')
+
 }
 final def log = project.logger
 final def variants = project.android.applicationVariants

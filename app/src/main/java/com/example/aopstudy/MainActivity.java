@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aopclick.AopClick;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView toastClick=findViewById(R.id.toastClick);
         toastClick.setOnClickListener(this);
     }
-    @AopClick(3000)
+    @AopClick(1500)
     @Override
     public void onClick(View v) {
       switch (v.getId()){
